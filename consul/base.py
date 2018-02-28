@@ -787,7 +787,7 @@ class Consul(object):
             *node* is the node to change state for.
             """
 
-            return self.agent.http.get(
+            return self.agent.http.put(
                 CB.bool(), '/v1/agent/force-leave/%s' % node)
 
         class Service(object):
